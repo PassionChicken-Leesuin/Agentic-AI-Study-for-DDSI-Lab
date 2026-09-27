@@ -1,0 +1,15 @@
+# 가상환경
+.venv/
+.venv-win/
+
+# API 키 — 절대 커밋 금지
+.env
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
