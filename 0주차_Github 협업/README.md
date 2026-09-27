@@ -1,90 +1,30 @@
-# 0주차 — GitHub 협업 규칙
+# 0주차 — GitHub 협업으로 Contributor가 되어보기 (Feat. Awesome Papers 프로젝트)
 
-이 스터디의 모든 제출은 GitHub의 **브랜치 → Pull Request → 리뷰 → merge** 흐름으로 이루어집니다.
-0주차의 목표는 이 흐름에 익숙해지는 것입니다.
+> 🔗 실습 저장소: [awesome-llm-application-papers-technology-management](https://github.com/PassionChicken-Leesuin/awesome-llm-application-papers-technology-management)
 
-## 핵심 개념 3줄 요약
+0주차는 본격적인 스터디에 앞서 **GitHub 협업 방식을 직접 이해하고 익히는 사전 준비** 단계입니다.
+자세한 협업 개념·흐름·명령어 설명은 위 실습 저장소의 안내 문서를 순서대로 읽어주세요:
 
-- **main 브랜치**: 교재(원본 노트북)가 있는 곳. 직접 push 금지 — 보호 설정되어 있어 어차피 안 됩니다.
-- **내 브랜치**: main에서 갈라져 나온 나만의 작업 공간. 여기서 뭘 해도 main은 안 바뀝니다.
-- **Pull Request (PR)**: "내 브랜치의 변경사항을 main에 합쳐주세요"라는 요청. 스터디장이 리뷰(approve)하면 merge되어 main에 반영됩니다.
+1. GitHub 협업을 위해 알아두어야 할 핵심 개념, 협업 흐름, 기본 명령어
+2. **Awesome Papers for LLM Applications in Technology Management** 저장소의 목적과 구성, 논문을 추가·수정·삭제하는 방법
+3. VS Code 환경에서의 초기 설정부터 브랜치 생성 → 파일 수정 → 커밋 → 푸시 → Pull Request까지의 전체 과정
 
-## 사전 준비 (최초 1회)
+## 과제: Contributor 되기
 
-1. GitHub 계정 생성 후 스터디장에게 계정명 알려주기 → collaborator로 초대받기 (이메일 초대 수락 필수)
-2. [Git 설치](https://git-scm.com/downloads)
-3. 본인 정보 등록:
+1. GitHub 협업 방식을 이해하고,
+2. Awesome Papers 프로젝트에 **논문을 하나 추가하거나 삭제**한 뒤 Pull Request를 올려주세요.
+3. 적절한 수정일 경우 스터디장이 Merge합니다 — 그럼 여러분은 해당 저장소의 **Contributor**가 됩니다! 🎉
 
-```bash
-git config --global user.name "본인이름"
-git config --global user.email "GitHub가입이메일"
-```
+> 이 저장소가 기술경영 Agentic AI 연구자들에게 유용한 저장소가 되는 것도 목적 중 하나입니다.
+> 논문을 정말로 읽어보시고, "이 논문은 이 저장소에 적합하지 않다!"라고 판단될 경우에만 삭제해주세요. (혹은 적절한 논문을 추가해주세요!)
 
-4. repo clone:
+## AI 코딩 도구 사용 원칙
 
-```bash
-git clone https://github.com/PassionChicken-Leesuin/Agentic-AI-Study-for-DDSI-Lab.git
-cd Agentic-AI-Study-for-DDSI-Lab
-```
+최근에는 VS Code에서 Claude Code나 Codex 같은 AI 코딩 도구로 자연어만으로도 파일 수정과 GitHub 작업 상당 부분을 수행할 수 있습니다. 하지만 이 사전 준비의 목적은 작업 완료가 아니라 **협업 방식을 직접 익히는 것**입니다.
 
-## 매주 제출 흐름
+- 파일 내용 수정: AI 도구 활용 **가능**
+- 브랜치 생성, 커밋, 푸시, Pull Request 등 GitHub 협업 작업: **VS Code 터미널에서 명령어를 직접 실행**하는 것을 기본 원칙으로 합니다.
 
-### 1. 최신 main 받아오기
+---
 
-```bash
-git switch main
-git pull
-```
-
-### 2. 내 브랜치 만들기
-
-브랜치 이름 규칙: `week{주차}/{본인이름}` (예: `week1/홍길동`)
-
-```bash
-git switch -c week1/홍길동
-```
-
-### 3. 작업하기
-
-해당 주차 폴더의 `submissions/본인이름/` 안에서만 작업합니다.
-**원본 교재 파일(`notebooks/` 등)은 절대 수정하지 않습니다.**
-
-### 4. 커밋하기
-
-```bash
-git add 1주차_Langgraph기본/submissions/홍길동/
-git status          # 의도한 파일만 올라가는지 확인! (.env 같은 게 섞이면 안 됨)
-git commit -m "1주차 퀴즈 제출 - 홍길동"
-```
-
-### 5. push & Pull Request
-
-```bash
-git push -u origin week1/홍길동
-```
-
-push 후 GitHub repo 페이지에 뜨는 **"Compare & pull request"** 버튼을 누르거나,
-`Pull requests` 탭 → `New pull request` → `base: main ← compare: week1/홍길동` 선택.
-
-- PR 제목: `[1주차] 홍길동 퀴즈 제출`
-- PR 본문: 어려웠던 점, 질문 등 자유롭게
-
-### 6. 리뷰 & merge
-
-스터디장이 PR을 확인하고 코멘트/approve 합니다.
-수정 요청이 오면 **같은 브랜치에서** 고치고 다시 `git add` → `commit` → `push` 하면 PR에 자동 반영됩니다.
-approve 후 merge되면 제출 완료! 🎉
-
-## 자주 묻는 질문
-
-**Q. 내 브랜치에서 실수하면 main도 망가지나요?**
-A. 아니요. 브랜치는 완전히 독립된 작업 공간이고, main은 merge 전까지 절대 안 바뀝니다. 게다가 main은 보호되어 있어서 리뷰 없이는 merge 자체가 불가능합니다. 마음껏 실험하세요.
-
-**Q. 다른 사람 제출물과 충돌(conflict)나지 않나요?**
-A. 각자 `submissions/본인이름/` 폴더만 건드리므로 충돌이 생길 수 없습니다. 충돌이 났다면 자기 폴더 밖의 파일을 수정한 것이니 스터디장에게 문의하세요.
-
-**Q. 브랜치를 잘못 만들었어요.**
-A. 새로 만들면 됩니다. `git switch main` → `git switch -c week1/홍길동` 부터 다시.
-
-**Q. push할 때 권한 오류가 나요.**
-A. collaborator 초대를 수락했는지 확인하세요 (GitHub 가입 이메일로 초대장이 갑니다).
+0주차를 완료했다면, 이 스터디 저장소에서의 주차별 제출 방법은 [1주차 README](../1주차_Langgraph기본/README.md)를 참고하세요. 흐름은 동일합니다: **브랜치 → 커밋 → 푸시 → Pull Request → 리뷰 → Merge**

@@ -3,6 +3,8 @@
 LangGraph의 기본 개념(그래프 생성, 모델 연결, QuickStart)을 다룹니다.
 교재 노트북은 [Langgraph_Study](https://github.com/PassionChicken-Leesuin/Langgraph_Study) (Teddy님 LangGraph 튜토리얼 기반)에서 가져왔으며, **이 폴더만으로 환경 구성이 끝나도록** 필요한 설정 파일을 모두 포함해 두었습니다. 다른 repo를 clone할 필요 없습니다.
 
+> 0주차([GitHub 협업으로 Contributor 되어보기](../0주차_Github%20협업/README.md))를 먼저 완료하고 오시면, 이 문서의 제출 흐름이 훨씬 익숙하게 느껴질 거예요.
+
 ## 폴더 구성
 
 ```
@@ -17,6 +19,17 @@ LangGraph의 기본 개념(그래프 생성, 모델 연결, QuickStart)을 다�
 │  ├─ 01-LangGraph-Models.ipynb
 │  └─ 01-QuickStart-LangGraph-Tutorial.ipynb
 └─ submissions/       ← 퀴즈 제출 폴더 (각자 자기 이름 폴더에 제출)
+```
+
+## 사전 준비 (최초 1회)
+
+1. GitHub 계정 생성 후 스터디장에게 계정명 알려주기 → collaborator로 초대받기 (가입 이메일로 오는 초대 수락 필수)
+2. [Git 설치](https://git-scm.com/downloads)
+3. 본인 정보 등록:
+
+```bash
+git config --global user.name "본인이름"
+git config --global user.email "GitHub가입이메일"
 ```
 
 ## 환경 설정 (최초 1회)
@@ -82,32 +95,96 @@ uv run jupyter lab
 
 ## 학습 순서
 
-1. `01-LangGraph-Introduction.ipynb` — LangGraph가 무엇인지, 왜 쓰는지
+1. `01-LangGraph-Introduction.ipynb` — LangGraph가 무엇인지, State 관리 체계 이해하기
 2. `01-LangGraph-Models.ipynb` — LLM 모델을 LangGraph에 연결하는 법
 3. `01-QuickStart-LangGraph-Tutorial.ipynb` — 처음부터 끝까지 그래프 만들어보기
 
-각 노트북 끝의 **퀴즈 셀**을 풀어서 제출하면 그 주차 학습 완료입니다.
+각 노트북 끝의 **🧩 퀴즈 셀**을 풀어서 제출하면 그 주차 학습 완료입니다.
+
+## GitHub 협업 핵심 개념 3줄 요약
+
+- **main 브랜치**: 교재(원본 노트북)가 있는 곳. 직접 push 금지 — 보호 설정되어 있어 어차피 안 됩니다.
+- **내 브랜치**: main에서 갈라져 나온 나만의 작업 공간. 여기서 뭘 해도 main은 안 바뀝니다.
+- **Pull Request (PR)**: "내 브랜치의 변경사항을 main에 합쳐주세요"라는 요청. 스터디장이 리뷰(approve)하면 merge되어 main에 반영됩니다.
+
+> 🤖 **AI 도구 사용 원칙**: 퀴즈(파일 내용)를 푸는 데는 AI 도구를 참고할 수 있지만, 브랜치 생성·커밋·푸시·PR 등 **GitHub 협업 작업은 터미널에서 명령어를 직접 실행**하는 것을 기본 원칙으로 합니다. (0주차와 동일)
 
 ## 퀴즈 제출 방법
 
-자세한 브랜치/PR 규칙은 [0주차 README](../0주차_Github%20협업/README.md)를 참고하세요. 요약하면:
+### 1. 최신 main 받아오기
 
 ```bash
-# 1. 최신 main에서 자기 브랜치 생성 (이름은 본인 이름으로)
 git switch main
 git pull
+```
+
+### 2. 내 브랜치 만들기
+
+브랜치 이름 규칙: `week{주차}/{본인이름}` (예: `week1/홍길동`)
+
+```bash
 git switch -c week1/홍길동
+```
 
-# 2. notebooks/의 노트북 3개를 submissions/본인이름/ 폴더로 복사
-#    (본인 이름 폴더는 이미 만들어져 있습니다. 원본 notebooks/ 는 절대 수정하지 않습니다)
+### 3. 노트북 복사 후 퀴즈 풀기
+
+`notebooks/`의 노트북 3개를 `submissions/본인이름/` 폴더로 복사합니다.
+(본인 이름 폴더는 이미 만들어져 있습니다. **원본 `notebooks/`는 절대 수정하지 않습니다.**)
+
+```bash
 cp notebooks/*.ipynb submissions/홍길동/
+```
 
-# 3. 복사본에서 퀴즈 셀을 풀고 커밋
-git add submissions/홍길동/
+복사본을 열어 각 노트북 끝의 퀴즈 빈칸(`________`)을 채우고, 셀을 실행해 통과를 확인하세요.
+
+### 4. 커밋하기
+
+```bash
+git add 1주차_Langgraph기본/submissions/홍길동/
+git status          # 의도한 파일만 올라가는지 확인! (.env 같은 게 섞이면 안 됨)
 git commit -m "1주차 퀴즈 제출 - 홍길동"
+```
 
-# 4. 브랜치 push 후 GitHub에서 Pull Request 생성
+### 5. push & Pull Request
+
+```bash
 git push -u origin week1/홍길동
 ```
 
-PR 제목: `[1주차] 홍길동 퀴즈 제출` — 리뷰(approve) 후 merge됩니다.
+push 후 GitHub repo 페이지에 뜨는 **"Compare & pull request"** 버튼을 누르거나,
+`Pull requests` 탭 → `New pull request` → `base: main ← compare: week1/홍길동` 선택.
+
+- PR 제목: `[1주차] 홍길동 퀴즈 제출`
+- PR 본문: 어려웠던 점, 질문 등 자유롭게
+
+### 6. 리뷰 & merge
+
+스터디장이 PR을 확인하고 코멘트/approve 합니다.
+수정 요청이 오면 **같은 브랜치에서** 고치고 다시 `git add` → `commit` → `push` 하면 PR에 자동 반영됩니다.
+approve 후 merge되면 제출 완료! 🎉
+
+## 자주 묻는 질문
+
+**Q. 내 브랜치에서 실수하면 main도 망가지나요?**
+A. 아니요. 브랜치는 완전히 독립된 작업 공간이고, main은 merge 전까지 절대 안 바뀝니다. 게다가 main은 보호되어 있어서 리뷰 없이는 merge 자체가 불가능합니다. 마음껏 실험하세요.
+
+**Q. 내 브랜치를 만든 뒤에 main에 새 파일이 추가됐는데, 내 브랜치에는 안 보여요.**
+A. 브랜치는 갈라져 나온 시점의 상태를 기준으로 하기 때문에, 그 이후 main의 변경사항은 자동으로 따라오지 않습니다. main을 내 브랜치로 merge해오면 됩니다:
+
+```bash
+git switch main
+git pull
+git switch week1/홍길동
+git merge main
+```
+
+작업 시작 전에 한 번씩 해주는 습관을 들이면 나중에 PR 충돌이 줄어듭니다.
+
+**Q. 다른 사람 제출물과 충돌(conflict)나지 않나요?**
+A. 각자 `submissions/본인이름/` 폴더만 건드리므로 충돌이 생길 수 없습니다. 충돌이 났다면 자기 폴더 밖의 파일을 수정한 것이니 스터디장에게 문의하세요.
+
+**Q. 브랜치를 잘못 만들었어요.**
+A. 새로 만들면 됩니다. `git switch main` → `git switch -c week1/홍길동` 부터 다시.
+
+**Q. push할 때 권한 오류가 나요.**
+A. collaborator 초대를 수락했는지 확인하세요 (GitHub 가입 이메일로 초대장이 갑니다).

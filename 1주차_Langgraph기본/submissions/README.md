@@ -10,4 +10,4 @@ submissions/
    └─ 01-QuickStart-LangGraph-Tutorial.ipynb
 ```
 
-제출 방법(브랜치/PR)은 [1주차 README](../README.md)와 [0주차 README](../../0주차_Github%20협업/README.md)를 참고하세요.
+제출 방법(브랜치/PR)은 [1주차 README](../README.md)의 "퀴즈 제출 방법"을 참고하세요.
