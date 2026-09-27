@@ -99,8 +99,7 @@ git pull
 git switch -c week1/홍길동
 
 # 2. notebooks/의 노트북 3개를 submissions/본인이름/ 폴더로 복사
-#    (원본 notebooks/ 는 절대 수정하지 않습니다)
-mkdir submissions/홍길동
+#    (본인 이름 폴더는 이미 만들어져 있습니다. 원본 notebooks/ 는 절대 수정하지 않습니다)
 cp notebooks/*.ipynb submissions/홍길동/
 
 # 3. 복사본에서 퀴즈 셀을 풀고 커밋
