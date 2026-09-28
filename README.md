@@ -47,4 +47,4 @@ git pull                  # 다른 PC에서 푸시해둔 내용 받아오기
 
 ---
 
-처음이라면 [1주차 README](./1주차_Langgraph기본/README.md)의 환경 설정부터 시작하세요.
+[1주차 README](./1주차_Langgraph기본/README.md)의 환경 설정부터 시작하세요.
