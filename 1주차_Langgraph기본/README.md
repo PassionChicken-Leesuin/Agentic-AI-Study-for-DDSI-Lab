@@ -14,11 +14,15 @@ LangGraph의 기본 개념(그래프 생성, 모델 연결, QuickStart)을 다�
 ├─ uv.lock            ← 버전 고정 (전원 동일한 환경 보장)
 ├─ .python-version    ← Python 버전 고정
 ├─ .env.example       ← API 키 템플릿
-├─ notebooks/         ← 교재 노트북 (직접 수정하지 마세요!)
+├─ notebooks/         ← 교재 원본 노트북 (직접 수정하지 마세요!)
 │  ├─ 01-LangGraph-Introduction.ipynb
 │  ├─ 01-LangGraph-Models.ipynb
 │  └─ 01-QuickStart-LangGraph-Tutorial.ipynb
-└─ submissions/       ← 퀴즈 제출 폴더 (각자 자기 이름 폴더에 제출)
+└─ submissions/       ← 각자 자기 이름 폴더 안의 '본인 노트북'으로 학습·제출
+   └─ 본인이름/
+      ├─ 본인이름_01-LangGraph-Introduction.ipynb
+      ├─ 본인이름_01-LangGraph-Models.ipynb
+      └─ 본인이름_01-QuickStart-LangGraph-Tutorial.ipynb
 ```
 
 ## 사전 준비 (최초 1회)
@@ -102,21 +106,13 @@ Copy-Item .env.example .env
 
 ### 5. 노트북 실행
 
-`notebooks/` 폴더의 노트북을 열고, 우측 상단 **Select Kernel**에서 `.venv`의 Python을 선택하세요.
+`submissions/본인이름/` 폴더의 본인 노트북을 열고, 우측 상단 **Select Kernel**에서 `.venv`의 Python을 선택하세요.
 
 Jupyter를 직접 띄우려면:
 
 ```bash
 uv run jupyter lab
 ```
-
-## 학습 순서
-
-1. `01-LangGraph-Introduction.ipynb` — LangGraph가 무엇인지, State 관리 체계 이해하기
-2. `01-LangGraph-Models.ipynb` — LLM 모델을 LangGraph에 연결하는 법
-3. `01-QuickStart-LangGraph-Tutorial.ipynb` — 처음부터 끝까지 그래프 만들어보기
-
-각 노트북 끝의 **🧩 퀴즈 셀**을 풀어서 제출하면 그 주차 학습 완료입니다.
 
 ## GitHub 협업 핵심 개념 3줄 요약
 
@@ -126,7 +122,7 @@ uv run jupyter lab
 
 > 🤖 **AI 도구 사용 원칙**: 퀴즈(파일 내용)를 푸는 데는 AI 도구를 참고할 수 있지만, 브랜치 생성·커밋·푸시·PR 등 **GitHub 협업 작업은 터미널에서 명령어를 직접 실행**하는 것을 기본 원칙으로 합니다. (0주차와 동일)
 
-## 퀴즈 제출 방법
+## 학습 및 퀴즈 제출 방법
 
 ### 1. 최신 main 받아오기
 
@@ -143,16 +139,15 @@ git pull
 git switch -c week1/홍길동
 ```
 
-### 3. 노트북 복사 후 퀴즈 풀기
+### 3. 학습 및 퀴즈 풀기
 
-`notebooks/`의 노트북 3개를 `submissions/본인이름/` 폴더로 복사합니다.
-(본인 이름 폴더는 이미 만들어져 있습니다. **원본 `notebooks/`는 절대 수정하지 않습니다.**)
+`submissions/본인이름/` 폴더에 **본인 이름이 붙은 노트북 3개**가 미리 들어 있습니다. 복사할 필요 없이 바로 열어서 아래 순서로 학습하세요. (**원본 `notebooks/`는 절대 수정하지 않습니다.**)
 
-```bash
-cp notebooks/*.ipynb submissions/홍길동/
-```
+1. `본인이름_01-LangGraph-Introduction.ipynb` — LangGraph가 무엇인지, State 관리 체계 이해하기
+2. `본인이름_01-LangGraph-Models.ipynb` — LLM 모델을 LangGraph에 연결하는 법
+3. `본인이름_01-QuickStart-LangGraph-Tutorial.ipynb` — 처음부터 끝까지 그래프 만들어보기
 
-복사본을 열어 각 노트북 끝의 퀴즈 빈칸(`________`)을 채우고, 셀을 실행해 통과를 확인하세요.
+각 노트북 끝의 🧩 퀴즈 빈칸(`________`)을 채우고, 셀을 실행해 통과를 확인하세요.
 
 ### 4. 커밋하기
 
