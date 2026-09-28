@@ -141,7 +141,7 @@ git switch -c week1/홍길동
 
 ### 3. 학습 및 퀴즈 풀기
 
-`submissions/본인이름/` 폴더에 **본인 이름이 붙은 노트북 3개**가 미리 들어 있습니다. 복사할 필요 없이 바로 열어서 아래 순서로 학습하세요. (**원본 `notebooks/`는 절대 수정하지 않습니다.**)
+`submissions/본인이름/` 폴더에 **본인 이름이 붙은 노트북 3개**가 미리 들어 있습니다. 바로 열어서 아래 순서로 학습하세요. (**원본 `notebooks/`는 절대 수정하지 않습니다.**)
 
 1. `본인이름_01-LangGraph-Introduction.ipynb` — LangGraph가 무엇인지, State 관리 체계 이해하기
 2. `본인이름_01-LangGraph-Models.ipynb` — LLM 모델을 LangGraph에 연결하는 법
