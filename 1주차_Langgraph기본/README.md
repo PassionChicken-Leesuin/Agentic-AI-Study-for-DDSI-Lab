@@ -34,7 +34,16 @@ git config --global user.email "GitHub가입이메일"
 
 ## 환경 설정 (최초 1회)
 
-### 1. uv 설치
+### 1. VS Code 준비
+
+1. [VS Code 설치](https://code.visualstudio.com/) 후 실행합니다.
+2. 왼쪽 확장(Extensions) 탭에서 **Python**과 **Jupyter** 확장을 설치합니다.
+3. 상단 메뉴 **File → Open Folder...** 로 이 스터디 자료를 내려받을 폴더(예: `문서/스터디`)를 엽니다.
+4. 상단 메뉴 **Terminal → New Terminal** (단축키 `` Ctrl+` ``)로 터미널을 엽니다.
+
+> 아래의 모든 명령어는 이렇게 연 **VS Code 안의 터미널**에 입력하면 됩니다.
+
+### 2. uv 설치
 
 [uv](https://docs.astral.sh/uv/)는 Python 패키지 관리자입니다. 터미널에서:
 
@@ -50,17 +59,25 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 설치 후 터미널을 **새로 열고** `uv --version`이 찍히는지 확인하세요.
 
-### 2. repo clone 및 의존성 설치
+### 3. repo clone 및 의존성 설치
 
 ```bash
 git clone https://github.com/PassionChicken-Leesuin/Agentic-AI-Study-for-DDSI-Lab.git
-cd Agentic-AI-Study-for-DDSI-Lab/1주차_Langgraph기본
+```
+
+clone이 끝나면 **File → Open Folder...** 로 방금 생긴 `Agentic-AI-Study-for-DDSI-Lab` 폴더를 다시 엽니다.
+(⚠️ 반드시 이 repo 폴더를 루트로 열어주세요 — 퀴즈용 워크스페이스 설정이 이때 적용됩니다.)
+
+새로 열린 창에서 다시 터미널을 열고(`` Ctrl+` ``):
+
+```bash
+cd 1주차_Langgraph기본
 uv sync
 ```
 
 `uv sync` 한 번이면 Python 설치 + 가상환경 생성 + 모든 패키지 설치가 끝납니다. (몇 분 걸릴 수 있어요.)
 
-### 3. API 키 설정
+### 4. API 키 설정
 
 `.env.example`을 복사해서 같은 폴더에 `.env` 파일을 만들고, 본인의 API 키를 채워 넣으세요:
 
@@ -83,9 +100,9 @@ Copy-Item .env.example .env
 
 > ⚠️ `.env`는 절대 커밋하지 마세요. `.gitignore`에 이미 등록되어 있지만, PR 올리기 전에 한 번 더 확인!
 
-### 4. 노트북 실행
+### 5. 노트북 실행
 
-VS Code 사용 시: 노트북을 열고 우측 상단에서 커널을 `.venv`의 Python으로 선택하세요.
+`notebooks/` 폴더의 노트북을 열고, 우측 상단 **Select Kernel**에서 `.venv`의 Python을 선택하세요.
 
 Jupyter를 직접 띄우려면:
 
