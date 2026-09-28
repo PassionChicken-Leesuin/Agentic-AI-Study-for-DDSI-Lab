@@ -1,0 +1,17 @@
+{
+  // 퀴즈 풀이용: 자동완성/힌트 비활성화 (이 워크스페이스에서만 적용)
+  "editor.quickSuggestions": {
+    "other": "off",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.parameterHints.enabled": false,
+  "editor.hover.enabled": false,
+  "editor.inlineSuggest.enabled": false,
+  "editor.snippetSuggestions": "none",
+  "editor.wordBasedSuggestions": "off",
+  "github.copilot.enable": {
+    "*": false
+  }
+}
