@@ -23,4 +23,4 @@ git switch -c week2/홍길동  # 그 주차용 내 브랜치 만들기 (주차 �
 
 > 💡 브랜치를 옮기기 전에 커밋 안 한 작업이 있다면 먼저 커밋하거나 `git stash -u`로 보관해두세요.
 
-처음이라면 [1주차 README](./1주차_Langgraph기본/README.md)의 환경 설정부터 시작하세요.
+[1주차 README](./1주차_Langgraph기본/README.md)의 환경 설정부터 시작하세요.
