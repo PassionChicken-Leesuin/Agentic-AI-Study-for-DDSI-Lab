@@ -33,6 +33,7 @@ Agentic AI 스터디는 크게 두 축으로 진행됩니다.
 |---|---|
 | [0주차](./0주차_Github%20협업/) | GitHub 협업으로 Contributor 되어보기 (사전 준비) |
 | [1주차](./1주차_Langgraph기본/) | LangGraph 기본 — State, 모델, QuickStart |
+| [2주차](./2주차_Langgraph_GraphAPI/) | Messages & Graph API — 메시지 유형, Reducer, 조건부 엣지, Send·Command |
 
 ## 매주 루틴
 
