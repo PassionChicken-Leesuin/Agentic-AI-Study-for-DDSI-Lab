@@ -9,12 +9,12 @@
 
 Agentic AI 스터디는 크게 두 축으로 진행됩니다.
 
-### 1️⃣ Agentic AI 구축에 필요한 필수 코딩 학습 — 이 레포지토리
+### 1️⃣ Agentic AI 구축에 필요한 필수 코딩 학습: 이 레포지토리
 
 - **목표**: 실제 Agentic AI 시스템을 구축하는 데 필요한 코딩 지식을 학습합니다. 
 - **소스**: [Braincrew Lab의 LangGraph 강의 코드](https://github.com/braincrew-lab/langgraph-v1-tutorial)를 기반으로, 학습에 적합한 내용을 스터디장이 선별·수정하여 주차별 폴더로 제공합니다.
 
-### 2️⃣ 『AI Agents in Depth』 교재 학습 — 대면 세미나
+### 2️⃣ 『AI Agents in Depth』 교재 학습: 대면 세미나
 
 - **목표**: Agentic AI 시스템을 설계·구축할 때 고려해야 하는 핵심 개념과 전반적인 흐름을 학습합니다.
 - **소스**: [AI Agents in Depth (교재 GitHub)](https://github.com/bojieli/ai-agent-book) — 매주 스터디장이 핵심 내용을 정리해 공유하므로, 교재를 미리 다 읽어올 필요는 없습니다.
@@ -34,6 +34,7 @@ Agentic AI 스터디는 크게 두 축으로 진행됩니다.
 | [0주차](./0주차_Github%20협업/) | GitHub 협업으로 Contributor 되어보기 (사전 준비) |
 | [1주차](./1주차_Langgraph기본/) | LangGraph 기본 — State, 모델, QuickStart |
 | [2주차](./2주차_Langgraph_GraphAPI/) | Messages & Graph API — 메시지 유형, Reducer, 조건부 엣지, Send·Command |
+| [3주차](./3주차_Langgraph_Agent_Tool/) | Agent & Tool — `create_agent`, 미들웨어, 동적 프롬프트, `@tool`, ToolRuntime, Store |
 
 ## 매주 루틴
 
