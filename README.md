@@ -35,6 +35,7 @@ Agentic AI 스터디는 크게 두 축으로 진행됩니다.
 | [1주차](./1주차_Langgraph기본/) | LangGraph 기본 — State, 모델, QuickStart |
 | [2주차](./2주차_Langgraph_GraphAPI/) | Messages & Graph API — 메시지 유형, Reducer, 조건부 엣지, Send·Command |
 | [3주차](./3주차_Langgraph_Agent_Tool/) | Agent & Tool — `create_agent`, 미들웨어, 동적 프롬프트, `@tool`, ToolRuntime, Store |
+| [4주차](./4주차_Langgraph_Runtime_StructuredOutput/) | Runtime & Structured Output — `context`·`store`·`stream_writer`, `@before_agent`/`jump_to`, `response_format`, `ToolStrategy`, `handle_errors` |
 
 ## 매주 루틴
 
